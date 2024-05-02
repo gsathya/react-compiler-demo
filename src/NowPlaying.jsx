@@ -37,7 +37,6 @@ function PlaybackSlider({ playback, onPlaybackChange }) {
         value={playback}
         type="range"
         onChange={(e) => {
-          console.log(e);
           onPlaybackChange(e.target.value);
         }}
       />
