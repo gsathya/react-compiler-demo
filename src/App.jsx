@@ -1,11 +1,20 @@
-import './App.css'
-import Component from "./Component";
-import './style.css'
+import "./App.css";
+import "./style.css";
+
+import { Header } from "./Header";
+import { Player } from "./Player";
+import Clock from "./Clock";
 
 function App() {
   return (
-    <Component />
-  )
+    <>
+      <div className="flex flex-col h-screen">
+        <Header />
+        <Player />
+      </div>
+      <Clock />
+    </>
+  );
 }
 
-export default App
+export default App;
