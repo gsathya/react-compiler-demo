@@ -4,23 +4,29 @@ function PlaylistItem({ name, artist, duration, onClick }) {
       className="grid grid-cols-[64px_1fr_auto] items-center gap-4"
       onClick={onClick}
     >
-      <img
-        alt="Album Cover"
-        className="rounded-md"
-        height={64}
-        src="/placeholder.svg"
-        style={{
-          aspectRatio: "64/64",
-          objectFit: "cover",
-        }}
-        width={64}
-      />
+      <AlbumImage />
       <div>
         <SongName>{name}</SongName>
         <ArtistName>{artist}</ArtistName>
       </div>
       <Duration>{duration}</Duration>
     </div>
+  );
+}
+
+function AlbumImage() {
+  return (
+    <img
+      alt="Album Cover"
+      className="rounded-md"
+      height={64}
+      src="/placeholder.svg"
+      style={{
+        aspectRatio: "64/64",
+        objectFit: "cover",
+      }}
+      width={64}
+    />
   );
 }
 
