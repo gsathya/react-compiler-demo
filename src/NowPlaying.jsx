@@ -1,49 +1,58 @@
 import { Slider } from "@/components/ui/slider";
 import { PlayerControls } from "./PlayerControls";
 
-export function NowPlaying({ playback, onPlaybackChange }) {
+export function NowPlaying({ song, onChange }) {
   return (
     <>
       <div className="flex items-center gap-4">
         <AlbumCover />
         <div>
-          <SongName />
-          <ArtistName />
+          <SongDetails song={song} />
         </div>
       </div>
       <div className="flex items-center justify-center gap-6">
         <PlayerControls />
       </div>
-      <PlaybackSlider playback={playback} onPlaybackChange={onPlaybackChange} />
+      <PlaybackSlider song={song} onChange={onChange} />
     </>
   );
 }
 
-function SongName() {
-  return <h2 className="text-lg font-bold">Starlight</h2>;
+function SongDetails({ song }) {
+  const { name, artist } = song;
+  return (
+    <>
+      <SongName>{name}</SongName>
+      <ArtistName>{artist}</ArtistName>
+    </>
+  );
 }
 
-function ArtistName() {
-  return <p className="text-gray-400">Muse</p>;
+function SongName({ children }) {
+  return <h2 className="text-lg font-bold">{children}</h2>;
 }
 
-function PlaybackSlider({ playback, onPlaybackChange }) {
+function ArtistName({ children }) {
+  return <p className="text-gray-400">{children}</p>;
+}
+
+function PlaybackSlider({ song, onChange }) {
   return (
     <>
       <input
         className="[&>span:first-child]:h-1 [&>span:first-child]:bg-white/30 [&_[role=slider]]:bg-white [&_[role=slider]]:w-3 [&_[role=slider]]:h-3 [&_[role=slider]]:border-0 [&>span:first-child_span]:bg-white [&_[role=slider]:focus-visible]:ring-0 [&_[role=slider]:focus-visible]:ring-offset-0 [&_[role=slider]:focus-visible]:scale-105 [&_[role=slider]:focus-visible]:transition-transform"
         max={100}
         step={1}
-        value={playback}
+        value={song.current}
         type="range"
         onChange={(e) => {
-          onPlaybackChange(e.target.value);
+          onChange({ ...song, current: e.target.value });
         }}
       />
       <label>
         <div className="flex items-center justify-between text-sm">
           <span>0:00</span>
-          <span>3:45</span>
+          <span>{song.duration}</span>
         </div>
       </label>
     </>
