@@ -12,15 +12,14 @@ const initialSong = {
 
 export function MusicPlayer({ songs }) {
   const [song, setSong] = useState(initialSong);
+  const filteredSongs = songs.filter(filterFn);
 
   return (
     <>
       <NowPlaying song={song} onChange={setSong} />
-      <PlayList songs={songs} onClick={setSong} />
+      <PlayList songs={filteredSongs} onClick={setSong} />
     </>
   );
 }
 
-function filterSongs(songs) {
-  return songs.filter((song) => song.isNew);
-}
+const filterFn = (song) => song.isNew;

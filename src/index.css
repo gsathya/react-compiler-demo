@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-
 #root {
   height: 100vh;
 }
@@ -103,7 +102,7 @@ label label {
   position: absolute;
   left: 0;
   right: 0;
-  top: -256px;
+  top: -56px;
   bottom: 0;
   margin: auto;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);

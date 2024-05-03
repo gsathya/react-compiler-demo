@@ -7,7 +7,8 @@ export function NowPlaying({ song, onChange }) {
       <div className="flex items-center gap-4">
         <AlbumCover />
         <div>
-          <SongDetails song={song} />
+          <SongName>{song.name}</SongName>
+          <ArtistName>{song.artist}</ArtistName>
         </div>
       </div>
       <div className="flex items-center justify-center gap-6">
@@ -15,16 +16,6 @@ export function NowPlaying({ song, onChange }) {
       </div>
       <PlaybackSlider song={song} onChange={onChange} />
     </div>
-  );
-}
-
-function SongDetails({ song }) {
-  const { name, artist } = song;
-  return (
-    <>
-      <SongName>{name}</SongName>
-      <ArtistName>{artist}</ArtistName>
-    </>
   );
 }
 
