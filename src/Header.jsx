@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export function Header() {
+export function Header({ toggleClock }) {
   return (
     <header className="bg-gray-900 text-white p-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
@@ -12,10 +12,12 @@ export function Header() {
           <SearchIcon className="h-5 w-5" />
           <span className="sr-only">Search</span>
         </Button>
-        <Button size="icon" variant="ghost">
-          <SettingsIcon className="h-5 w-5" />
-          <span className="sr-only">Settings</span>
-        </Button>
+        <div onClick={toggleClock}>
+          <Button size="icon" variant="ghost">
+            <SettingsIcon className="h-5 w-5" />
+            <span className="sr-only">Settings</span>
+          </Button>
+        </div>
       </div>
     </header>
   );

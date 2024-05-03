@@ -4,17 +4,24 @@ import "./style.css";
 import { Header } from "./Header";
 import { MusicPlayer } from "./MusicPlayer";
 import Clock from "./Clock";
+import { useState } from "react";
 
 function App() {
+  const [showClock, setShowClock] = useState(false);
+
   return (
     <>
       <div className="flex flex-col h-screen">
-        <Header />
+        <Header
+          toggleClock={() => {
+            setShowClock((t) => !t);
+          }}
+        />
         <div className="flex-1 flex flex-col lg:flex-row">
           <MusicPlayer songs={songs} />
         </div>
       </div>
-      <Clock />
+      {showClock && <Clock />}
     </>
   );
 }

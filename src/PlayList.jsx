@@ -1,7 +1,7 @@
 function PlaylistItem({ name, artist, duration, onClick }) {
   return (
     <div
-      className="grid grid-cols-[64px_1fr_auto] items-center gap-4"
+      className="grid grid-cols-[64px_1fr_auto] items-center gap-4 cursor-pointer"
       onClick={onClick}
     >
       <AlbumImage />
