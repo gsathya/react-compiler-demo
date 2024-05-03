@@ -15,10 +15,10 @@ export function MusicPlayer({ songs }) {
   const filteredSongs = songs.filter(filterFn);
 
   return (
-    <>
+    <div className="bg-gray-70 flex w-full">
       <NowPlaying song={song} onChange={setSong} />
       <PlayList songs={filteredSongs} onClick={setSong} />
-    </>
+    </div>
   );
 }
 

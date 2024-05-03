@@ -3,7 +3,7 @@ import { PlayerControls } from "./PlayerControls";
 
 export function NowPlaying({ song, onChange }) {
   return (
-    <div className="bg-gray-900 text-white p-6 flex flex-col gap-6 lg:w-1/3">
+    <div className="bg-gray-90 text-white p-6 flex flex-col gap-6 lg:w-1/3">
       <div className="flex items-center gap-4">
         <AlbumCover />
         <div>
@@ -24,14 +24,14 @@ function SongName({ children }) {
 }
 
 function ArtistName({ children }) {
-  return <p className="text-gray-400">{children}</p>;
+  return <p className="text-gray-40">{children}</p>;
 }
 
 function PlaybackSlider({ song, onChange }) {
   return (
     <>
       <input
-        className="[&>span:first-child]:h-1 [&>span:first-child]:bg-white/30 [&_[role=slider]]:bg-white [&_[role=slider]]:w-3 [&_[role=slider]]:h-3 [&_[role=slider]]:border-0 [&>span:first-child_span]:bg-white [&_[role=slider]:focus-visible]:ring-0 [&_[role=slider]:focus-visible]:ring-offset-0 [&_[role=slider]:focus-visible]:scale-105 [&_[role=slider]:focus-visible]:transition-transform"
+        className="accent-brand-dark [&>span:first-child]:h-1 [&>span:first-child]:bg-white/30 [&_[role=slider]]:bg-white [&_[role=slider]]:w-3 [&_[role=slider]]:h-3 [&_[role=slider]]:border-0 [&>span:first-child_span]:bg-white [&_[role=slider]:focus-visible]:ring-0 [&_[role=slider]:focus-visible]:ring-offset-0 [&_[role=slider]:focus-visible]:scale-105 [&_[role=slider]:focus-visible]:transition-transform"
         max={100}
         step={1}
         value={song.current}
@@ -56,7 +56,7 @@ function AlbumCover() {
       alt="Album Cover"
       className="rounded-md"
       height={64}
-      src="/placeholder.svg"
+      src="/muse.jpeg?"
       style={{
         aspectRatio: "64/64",
         objectFit: "cover",
