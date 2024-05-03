@@ -34,16 +34,16 @@ function Duration({ children }) {
   return <span className="text-gray-40">{children} </span>;
 }
 function SongName({ children }) {
-  return <h3 className="text-primary-dark text-lg font-bold">{children}</h3>;
+  return <h3 className="text-lg font-bold text-primary-dark">{children}</h3>;
 }
 
 function ArtistName({ children }) {
-  return <p className="text-tertiary-dark text-gray-40">{children}</p>;
+  return <p className="text-tertiary-dark">{children}</p>;
 }
 export function PlayList({ songs, onClick }) {
   return (
     <div className="flex-1 overflow-auto p-6">
-      <h2 className="text-primary-dark text-2xl font-bold mb-4">Playlist</h2>
+      <h2 className="text-2xl font-bold mb-4 text-primary-dark">Playlist</h2>
       <div className="grid gap-4">
         {songs.map((song, id) => (
           <PlaylistItem
