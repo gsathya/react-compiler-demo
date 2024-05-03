@@ -3,7 +3,7 @@ import { PlayerControls } from "./PlayerControls";
 
 export function NowPlaying({ song, onChange }) {
   return (
-    <>
+    <div className="bg-gray-900 text-white p-6 flex flex-col gap-6 lg:w-1/3">
       <div className="flex items-center gap-4">
         <AlbumCover />
         <div>
@@ -14,7 +14,7 @@ export function NowPlaying({ song, onChange }) {
         <PlayerControls />
       </div>
       <PlaybackSlider song={song} onChange={onChange} />
-    </>
+    </div>
   );
 }
 
