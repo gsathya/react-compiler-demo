@@ -11,12 +11,12 @@ const initialSong = {
 };
 
 export function MusicPlayer({ allSongs }) {
-  const [song, setSong] = useState(initialSong);
+  const [currentSong, setCurrentSong] = useState(initialSong);
 
   return (
     <>
-      <NowPlaying song={song} onChange={setSong} />
-      <PlayList songs={allSongs} onClick={setSong} />
+      <NowPlaying song={currentSong} onChange={setCurrentSong} />
+      <PlayList songs={allSongs} onClick={setCurrentSong} />
     </>
   );
 }
