@@ -10,14 +10,13 @@ const initialSong = {
   current: 0,
 };
 
-export function MusicPlayer({ songs }) {
+export function MusicPlayer({ allSongs }) {
   const [song, setSong] = useState(initialSong);
-  const filteredSongs = songs.filter(filterFn);
 
   return (
     <div className="bg-gray-70 flex w-full">
       <NowPlaying song={song} onChange={setSong} />
-      <PlayList songs={filteredSongs} onClick={setSong} />
+      <PlayList songs={allSongs} onClick={setSong} />
     </div>
   );
 }
