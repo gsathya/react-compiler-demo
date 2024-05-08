@@ -14,10 +14,10 @@ export function MusicPlayer({ allSongs }) {
   const [song, setSong] = useState(initialSong);
 
   return (
-    <div className="bg-gray-70 flex w-full">
+    <>
       <NowPlaying song={song} onChange={setSong} />
       <PlayList songs={allSongs} onClick={setSong} />
-    </div>
+    </>
   );
 }
 

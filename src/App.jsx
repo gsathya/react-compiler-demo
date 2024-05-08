@@ -18,7 +18,9 @@ function App() {
           }}
         />
         <div className="flex-1 flex flex-col lg:flex-row">
-          <MusicPlayer allSongs={songs} />
+          <div className="bg-gray-70 flex w-full">
+            <MusicPlayer allSongs={songs} />
+          </div>
         </div>
       </div>
       {showClock && <Clock />}
