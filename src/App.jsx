@@ -21,7 +21,7 @@ function App() {
           <MusicPlayer songs={songs} />
         </div>
       </div>
-      {showClock && <Clock />}
+      <Clock />
     </>
   );
 }

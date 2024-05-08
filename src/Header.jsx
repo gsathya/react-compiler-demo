@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 export function Header({ toggleClock }) {
   return (
-    <header className="bg-gray-900 text-white p-4 flex items-center justify-between">
+    <header className="bg-gray-90 text-white p-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <MusicIcon className="h-6 w-6" />
+        <MusicIcon className="h-6 w-6 text-brand-dark" />
         <h1 className="text-xl font-bold">Music Player</h1>
       </div>
       <div className="flex items-center gap-4">
