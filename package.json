@@ -19,10 +19,10 @@
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "react-forget-runtime": "file:/Users/rickhanlonii/oss/forget-feedback/dist/react-forget-runtime"
+    "react-forget-runtime": "file:/Users/gsn/code/forget-feedback/dist/react-forget-runtime"
   },
   "devDependencies": {
-    "babel-plugin-react-forget": "file:/Users/rickhanlonii/oss/forget-feedback/dist/babel-plugin-react-forget",
+    "babel-plugin-react-forget": "file:/Users/gsn/code/forget-feedback/dist/babel-plugin-react-forget",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
