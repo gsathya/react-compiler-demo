@@ -1,6 +1,6 @@
 import React, { createRef, PureComponent } from "react";
 
-const SPEED = 0.003 / Math.PI;
+const SPEED = 0.006 / Math.PI;
 const FRAMES = 10;
 
 export default class Clock extends PureComponent {
