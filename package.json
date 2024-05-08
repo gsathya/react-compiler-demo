@@ -15,18 +15,18 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.377.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0-beta-e7d213dfb0-20240507",
+    "react-compiler-runtime": "file:/Users/gsn/code/forget-feedback/dist/react-compiler-runtime",
+    "react-dom": "^19.0.0-beta-e7d213dfb0-20240507",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "react-forget-runtime": "file:/Users/gsn/code/forget-feedback/dist/react-forget-runtime"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "babel-plugin-react-forget": "file:/Users/gsn/code/forget-feedback/dist/babel-plugin-react-forget",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "babel-plugin-react-compiler": "file:/Users/gsn/code/forget-feedback/dist/babel-plugin-react-compiler",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",

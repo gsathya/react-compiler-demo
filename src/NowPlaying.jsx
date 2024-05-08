@@ -1,4 +1,4 @@
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "./components/ui/slider";
 import { PlayerControls } from "./PlayerControls";
 
 export function NowPlaying({ song, onChange }) {
