@@ -42,12 +42,34 @@ function PlaybackSlider({ song, onChange }) {
       />
       <label>
         <div className="flex items-center justify-between text-sm">
-          <span>0:00</span>
+          <span>{calculateCurrentSongTime(song)}</span>
           <span>{song.duration}</span>
         </div>
       </label>
     </>
   );
+}
+
+function formatSeconds(sec) {
+  if (sec < 10) {
+    return `0${sec}`;
+  }
+
+  return `${sec}`;
+}
+
+function calculateCurrentSongTime(song) {
+  const [mins, seconds] = song.duration.split(":").map((n) => parseInt(n));
+  const total = mins * 60 + seconds;
+  const currentPercentage = parseInt(song.current);
+  const currentNum = Math.floor((currentPercentage * total) / 100);
+  const currentMin = Math.floor(currentNum / 60);
+  const currentSec = Math.floor(currentNum % 60);
+  if (currentMin === 0 && currentSec === 0) {
+    return `0`;
+  }
+
+  return `${currentMin}:${formatSeconds(currentSec)}`;
 }
 
 function AlbumCover() {
