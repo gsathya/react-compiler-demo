@@ -65,10 +65,6 @@ function calculateCurrentSongTime(song) {
   const currentNum = Math.floor((currentPercentage * total) / 100);
   const currentMin = Math.floor(currentNum / 60);
   const currentSec = Math.floor(currentNum % 60);
-  if (currentMin === 0 && currentSec === 0) {
-    return `0`;
-  }
-
   return `${currentMin}:${formatSeconds(currentSec)}`;
 }
 
