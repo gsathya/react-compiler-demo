@@ -96,7 +96,6 @@ label label {
 }
 
 .stutterer {
-  transform: scale(1.5);
   height: 310px;
   width: 310px;
   position: absolute;
