@@ -4,9 +4,9 @@ import { PlayerControls } from "./PlayerControls";
 export function NowPlaying({ song, onChange }) {
   return (
     <div className="bg-gray-90 text-white p-6 flex flex-col gap-6 lg:w-1/3">
-      <div className="flex items-center gap-4">
-        <AlbumCover />
-        <div>
+      <div className="flex gap-4">
+        <AlbumCover img={song.img} />
+        <div className="flex flex-col items-start">
           <SongName>{song.name}</SongName>
           <ArtistName>{song.artist}</ArtistName>
         </div>
@@ -68,13 +68,13 @@ function calculateCurrentSongTime(song) {
   return `${currentMin}:${formatSeconds(currentSec)}`;
 }
 
-function AlbumCover() {
+function AlbumCover({ img }) {
   return (
     <img
       alt="Album Cover"
       className="rounded-md"
       height={64}
-      src="/muse.jpeg?"
+      src={img ?? "/muse.jpeg"}
       style={{
         aspectRatio: "64/64",
         objectFit: "cover",

@@ -1,10 +1,10 @@
-function PlaylistItem({ name, artist, duration, onClick }) {
+function PlaylistItem({ name, artist, duration, onClick, img }) {
   return (
     <div
       className="grid grid-cols-[64px_1fr_auto] items-center gap-4 cursor-pointer"
       onClick={onClick}
     >
-      <AlbumImage />
+      <AlbumImage img={img} />
       <div className="flex flex-col items-start">
         <SongName>{name}</SongName>
         <ArtistName>{artist}</ArtistName>
@@ -14,13 +14,13 @@ function PlaylistItem({ name, artist, duration, onClick }) {
   );
 }
 
-function AlbumImage() {
+function AlbumImage({ img }) {
   return (
     <img
       alt="Album Cover"
       className="rounded-md"
       height={64}
-      src="/muse.jpeg"
+      src={img ?? "/muse.jpeg"}
       style={{
         aspectRatio: "64/64",
         objectFit: "cover",
