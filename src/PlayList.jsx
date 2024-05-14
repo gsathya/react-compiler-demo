@@ -43,7 +43,9 @@ function ArtistName({ children }) {
 export function PlayList({ songs, onClick }) {
   return (
     <div className="flex-1 overflow-auto p-6">
-      <h2 className="text-2xl font-bold mb-4 text-primary-dark">Playlist</h2>
+      <h2 className="text-2xl font-bold mb-4 text-primary-dark">
+        React Conf Playlist
+      </h2>
       <div className="grid gap-4">
         {songs.map((song, id) => (
           <PlaylistItem
